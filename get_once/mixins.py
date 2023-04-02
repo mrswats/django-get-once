@@ -1,6 +1,5 @@
 import copy
-from typing import Callable
-from typing import Type
+from collections.abc import Callable
 
 from django.db.models import Model
 from rest_framework.request import Request
@@ -10,7 +9,7 @@ from rest_framework.serializers import Serializer
 
 class GetOnceMixin:
     get_object: Callable[[], Model]
-    get_serializer: Callable[[Model], Type[Serializer]]
+    get_serializer: Callable[[Model], type[Serializer]]
 
     def retrieve(self, request: Request, *args, **kwargs) -> Response:
         instance = self.get_object()

@@ -70,26 +70,6 @@ exclude = """
 [tool.isort]
 profile = "black"
 
-[tool.mypy]
-plugins = ["mypy_django_plugin.main"]
-files = "simple_analytics"
-namespace_packages = true
-explicit_package_bases = true
-show_error_codes = true
-strict = true
-enable_error_code = [
-    "ignore-without-code",
-    "redundant-expr",
-    "truthy-bool",
-]
-exclude = [
-   "manage.py",
-   "tests/",
-]
-
-[tool.django-stubs]
-django_settings_module = "tests.settings"
-
 [tool.coverage.run]
 source = ["."]
 branch = true

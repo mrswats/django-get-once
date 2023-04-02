@@ -1,4 +1,5 @@
 from rest_framework.routers import SimpleRouter
+
 from testing.views import TestViewSet
 
 router = SimpleRouter()
