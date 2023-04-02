@@ -1,6 +1,6 @@
 [project]
 name = "django-get-once"
-version = "0.1.0"
+version = "1.0.0"
 description = "A Django Rest ViewSet Mixin that only lets you get objects once."
 readme = "README.md"
 requires-python = ">=3.8"
