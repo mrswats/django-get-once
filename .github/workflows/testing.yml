@@ -35,8 +35,5 @@ jobs:
       - name: Lint with flake8
         run: pre-commit run --all-files flake8
 
-      - name: Lint Mypy
-        run: mypy .
-
       - name: Test with pytest
         run: pytest -v

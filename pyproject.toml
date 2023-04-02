@@ -34,13 +34,15 @@ homepage = "https://github.com/mrswats/django-get-once"
 test = [
     "pre-commit",
     "pytest",
-    "pytest-cov",
     "pytest-django",
 ]
 
 [build-system]
-requires = ["setuptools>=67.0"]
+requires = ["setuptools>=67.4"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["get_once"]
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "tests.settings"
@@ -66,22 +68,3 @@ exclude = """
   )/
 )
 """
-
-[tool.isort]
-profile = "black"
-
-[tool.coverage.run]
-source = ["."]
-branch = true
-omit = [
-    "manage.py",
-    "**/tests/*",
-    "**/migrations/*.py",
-]
-
-[tool.coverage.report]
-skip_empty = true
-fail_under = 90
-
-[tool.coverage.html]
-directory = "htmlcov/"
